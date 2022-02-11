@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        :root{
+            --primary-color: #1e90ff; /* keep names generic in case something changes (dont name it blue) */
+
+            --base-text-color: #ffffff;
+        }
+
+        body{
+            background-color: var(--primary-color);
+            color: var(--base-text-color);
+        }
+
+        .invert{
+            background-color: black;
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body class = "">
+    <h1> Toggle Dark Mode Example</h1>
+
+    <button class = "js-toggle-class">Toggle Me</button> <!-- make sure this class is here to toggle -->
+
+    <script>
+        const buttonElement = document.querySelector('.js-toggle-class');
+
+        buttonElement.addEventListener('click', function(){
+            const rootElement = document.querySelector(':root');
+
+            rootElement.style.setProperty('--primary-color', '#908098');
+
+            //bodyElement.classList.toggle('invert');
+           // alert('IT Works');
+        })
+        console.log(buttonElement);
+
+        //const buttonElement = document.querySelector('.buttonClass');
+
+    </script>
+    
+</body>
+</html>
