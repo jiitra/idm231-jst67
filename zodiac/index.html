@@ -1,75 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="main.css">
     <title>Zodiac Project</title>
 </head>
+
 <body>
     <header>
         <h1>Zodiac Color Grading</h1>
         <h2>Which movie's color palette are you based on your zodiac sign?</h2>
     </header>
 
-    <section id = "birthdayInput">
+    <div class="birthdayInput">
         <h4>Enter your birthday:</h4>
 
-        <input type = "date" id = "date">
-    </section>
+        <input type="date" id="date">
+    </div>
 
-<!--     NOTE TO SELF: Link to film-grab.com link for each movie with "see more" or something  -->
+    <div class="card-container">
+        <div class="card">
+            <h1><em> Fear and Loathing in Las Vegas </em></h1>
+            <img class="card-img" src="img/fear-and-loathing.jpeg" alt="Fear and Loathing in Las Vegas Screenshot">
+            <p class="card-description">
+                <b>Aries</b>, you’re bold and determined. The warm, energetic color palette in <em>Fear and Loathing in Las Vegas</em> 
+                channels your inner fire and uninhibited nature. You’re often described as electrifying, and the
+                saturated neon colors in this film represent your quickness and spark. Face the world with courage and
+                it will reward your confidence.
+            </p>
+        </div>
+    </div>
+    <!--     NOTE TO SELF: Link to film-grab.com link for each movie with "see more" or something  -->
 
-    <section id = "movieStills">
-        <div class = "movie">
-            <img src="" alt = "Fear and Loathing in Las Vegas Screenshot">
+    <div class="movieStills-container">
+        <div class="movieStills">
+            <figure class="movieStills-figure">
+                <img class="thumbnail" src="img/fear-and-loathing.jpeg" alt="Fear and Loathing in Las Vegas Screenshot">
+                <figcaption class="zodiacLabel">Aries</figcaption>
+            </figure>
         </div>
 
-        <div class = "movie">
-            <img src="" alt = "Her Screenshot">
+        <div class="movieStills">
+            <img class="thumbnail" src="img/her.jpeg" alt="Her Screenshot">
         </div>
 
-        <div class = "movie">
-            <img src="" alt = "Amelie Screenshot">
+        <div class="movieStills">
+            <img class="thumbnail" src="img/amelie.jpeg" alt="Amelie Screenshot">
         </div>
 
-        <div class = "movie">
-            <img src="" alt = "The Social Network Screenshot">
+        <div class="movieStills">
+            <img class="thumbnail" src="img/social-network.jpeg" alt="The Social Network Screenshot">
         </div>
 
-        <div class = "movie">
-            <img src="" alt = "Fantastic Mr. Fox Screenshot">
+        <div class="movieStills">
+            <img class="thumbnail" src="img/fantastic-fox.jpeg" alt="Fantastic Mr. Fox Screenshot">
         </div>
 
-        <div class = "movie">
-            <img src="" alt = "La La Land Screenshot">
+        <div class="movie">
+            <img class="thumbnail" src="img/la-la-land.jpeg" alt="La La Land Screenshot">
         </div>
 
-        <div class = "movie">
-            <img src="" alt = "Harry Potter and the Chamber of Secrets Screenshot">
+        <div class="movieStills">
+            <img class="thumbnail" src="img/harry-potter.jpeg" alt="Harry Potter and the Chamber of Secrets Screenshot">
         </div>
 
-        <div class = "movie">
-            <img src="" alt = "The Dark Knight Screenshot">
+        <div class="movieStills">
+            <img class="thumbnail" src="img/dark-knight.jpeg" alt="The Dark Knight Screenshot">
         </div>
 
-        <div class = "movie">
-            <img src="" alt = "Joker Screenshot">
+        <div class="movieStills">
+            <img class="thumbnail" src="img/joker.png" alt="Joker Screenshot">
         </div>
 
-        <div class = "movie">
-            <img src="" alt = "Lars and the Real Girl Screenshot">
+        <div class="movieStills">
+            <img class="thumbnail" src="img/lars.jpeg" alt="Lars and the Real Girl Screenshot">
         </div>
 
-        <div class = "movie">
-            <img src="" alt = "Twilight Screenshot">
+        <div class="movieStills">
+            <img class="thumbnail" src="img/twilight.jpeg" alt="Twilight Screenshot">
         </div>
 
-        <div class = "movie">
-            <img src="" alt = "Romeo + Juliet Screenshot">
+        <div class="movieStills">
+            <img class="thumbnail" src="img/romeo-juliet.jpeg" alt="Romeo + Juliet Screenshot">
         </div>
+    </div>
 
-    </section>
-    
 </body>
+
 </html>
