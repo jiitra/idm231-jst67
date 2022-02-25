@@ -2,26 +2,39 @@
 add hover to thumbnail so photo zooms on hover */
 
 *{
-    border: none;
+    /*border: none;*/
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-.thumbnail{
-    max-width: 500px; /* for now */
-    min-height: 500px;
-    margin: 10px;
+
+.movieStills__thumbnail{
+    width: 32rem; /* ~500 px */
+    height: 32rem;
     object-fit: cover;
+
+    transition: transform .5s ease;
 }
 
-.movieStills-container{
+.movieStills__container{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+
+    gap: 1rem;
 }
 
-.movieStills-figure{
+.movieStills__figure{
     position: relative;
+}
+
+.movieStills{
+    height: 32rem;
+    overflow: hidden;
+}
+
+.movieStills:hover .movieStills__thumbnail{
+    transform: scale(1.1);
 }
 
 .zodiacLabel{
@@ -33,9 +46,11 @@ add hover to thumbnail so photo zooms on hover */
 }
 
 .card{
-    /* display:none; */
+    /*display:none;*/
 }
 
-.card-img{
+.card__img{
     max-width: 300px; /* for now*/
 }
+
+/* write a media query to reduce image w/h at breakpoints */
