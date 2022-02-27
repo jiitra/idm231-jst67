@@ -8,10 +8,15 @@ submitButton.addEventListener("click", function (event) {
 
     const dateInput = document.querySelector(".js-date-input");
 
-    let birthDate = new Date(dateInput.value); //.value collects it
+    const d = dateInput.value;
+    const parsedYear = d.slice(0,4);
 
-    let month = birthDate.getMonth() + 1;
-    let day = birthDate.getDate() + 1;
+    //makes sure date is correct, avoids the "day=32" issue
+    const properDateString = (d.slice(5) + '-' + parsedYear).replace(/-/g, '\/');
+    let birthDate = new Date(properDateString);
+
+    let month = birthDate.getMonth() +1;
+    let day = birthDate.getDate();
     let year = birthDate.getFullYear();
 
     getSeason(month, day, year);
