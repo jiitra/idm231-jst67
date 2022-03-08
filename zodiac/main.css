@@ -1,11 +1,48 @@
-/* TO DO:
-add hover to thumbnail so photo zooms on hover */
+:root{
+    --background-color: #f5f5f5;
+    --card-color: 
+}
 
 *{
     /*border: none;*/
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body{
+    font-family: Helvetica, sans-serif;
+    background-color: var(--background-color);
+}
+
+.intro{
+    margin: 3rem auto;
+    display:grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.intro__title{
+    font-size: 3rem;
+    margin-bottom: 2.4rem;
+}
+
+.upper{
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+}
+
+.intro__subtitle{
+    font-size: 1.3 rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.instructions{
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 1rem;
 }
 
 .movieStills__thumbnail{
@@ -16,12 +53,13 @@ add hover to thumbnail so photo zooms on hover */
     transition: transform .5s ease;
 }
 
-.movieStills__container{
+.movieStills__gallery{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
 
     gap: 1rem;
+    margin: 2rem auto;
 }
 
 .movieStills__figure{
@@ -43,14 +81,28 @@ add hover to thumbnail so photo zooms on hover */
     top: 50%;
     left: 0;
     width: 100%;
-}
 
-.card{
-    /*display:none;*/
+    font-size: 2rem;
+    color: var(--background-color);
+
+    text-shadow: 0 0 0.6rem black;
 }
 
 .card__img{
     max-width: 300px; /* for now*/
 }
 
+.card{
+    background-color: #f0f0f0;
+    position: fixed;
+    max-height: 90vh;
+    width: 50vw;
+    margin: 0 25vw;
+    z-index: 10;
+    padding: 3rem;
+}
+
+.hidden{
+    display: none;
+}
 /* write a media query to reduce image w/h at breakpoints */

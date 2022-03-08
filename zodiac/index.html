@@ -11,26 +11,28 @@
 </head>
 
 <body>
-    <header>
-        <h1>Zodiac Color Grading</h1>
-        <h2>Which movie's color palette are you based on your zodiac sign?</h2>
-    </header>
+    <section class="intro">
+        <header class="intro__item">
+            <h1 class="intro__title upper">Zodiac Color Grading</h1>
+            <h2 class=intro__subtitle>Which movie's color palette are you based on your zodiac sign?</h2>
+        </header>
 
-    <div class="birthdayInput">
-        <h4>Enter your birthday:</h4>
-        <form action="">
+        <div class="birthdayInput intro__item">
+            <h4 class="instructions">Enter your birthday:</h4>
+            <form action="">
 
-            <input id="birthdayinput" class="js-date-input" type="date">
+                <input id="birthdayinput" class="js-date-input" type="date">
 
-            <button class="js-submit-button" type="button">Submit</button>
+                <button class="js-submit-button" type="button">Submit</button>
 
-        </form>
-        <script src="app.js"></script>
-    </div>
+            </form>
+            <script src="app.js"></script>
+        </div>
+    </section>
 
     <div class="card__container">
 
-        <div class="card">
+        <div class="card hidden" id="aries">
 
             <h1><em> Fear and Loathing in Las Vegas </em></h1>
 
@@ -46,7 +48,7 @@
 
         </div>
 
-        <div class="card">
+        <div class="card hidden">
 
             <h1><em> Her </em></h1>
 
@@ -62,7 +64,7 @@
 
         </div>
 
-        <div class="card">
+        <div class="card hidden">
 
             <h1><em> Amelie </em></h1>
 
@@ -78,7 +80,7 @@
 
         </div>
 
-        <div class="card">
+        <div class="card hidden">
 
             <h1><em> The Social Network </em></h1>
 
@@ -96,7 +98,7 @@
 
         </div>
 
-        <div class="card">
+        <div class="card hidden">
 
             <h1><em> Fantastic Mr. Fox </em></h1>
 
@@ -111,7 +113,7 @@
 
         </div>
 
-        <div class="card">
+        <div class="card hidden">
 
             <h1><em> La La Land </em></h1>
 
@@ -126,7 +128,7 @@
 
         </div>
 
-        <div class="card">
+        <div class="card hidden">
 
             <h1><em> Harry Potter and the Chamber of Secrets </em></h1>
 
@@ -142,7 +144,7 @@
 
         </div>
 
-        <div class="card">
+        <div class="card hidden">
 
             <h1><em> The Dark Knight </em></h1>
 
@@ -159,7 +161,7 @@
 
         </div>
 
-        <div class="card">
+        <div class="card hidden">
 
             <h1><em> Joker </em></h1>
 
@@ -178,7 +180,7 @@
 
         </div>
 
-        <div class="card">
+        <div class="card hidden">
 
             <h1><em> Lars and the Real Girl </em></h1>
 
@@ -196,7 +198,7 @@
 
         </div>
 
-        <div class="card">
+        <div class="card hidden">
 
             <h1><em> Twilight </em></h1>
 
@@ -213,23 +215,7 @@
 
         </div>
 
-        <div class="card">
-
-            <h1><em> Twilight </em></h1>
-
-            <img class="card__img" src="img/twilight.jpeg" alt="Twilight">
-
-            <p class="card__description">
-                <b>Aquarius</b>,you’re the classic over-the-top blue color grading from <em>Twilight</em>. You’re quirky
-                and many
-                may roll their eyes at you, but there’s also something inadvertently charming and memorable about you.
-                For all the time you spend in your mind, it makes sense that you’re cloaked in blue, the cerebral color.
-                Keep striving to be contrarian, and you’ll amass a crowd of dedicated followers.
-            </p>
-
-        </div>
-
-        <div class="card">
+        <div class="card hidden">
 
             <h1><em> Romeo + Juliet </em></h1>
 
@@ -237,7 +223,8 @@
 
             <p class="card__description">
                 <b>Pisces</b>,you’re an artist and a dreamer. Your imagination is the envy of many. That’s why the color
-                palette from <em>Romeo + Juliet</em> is perfect for you. Baz Luhrmann creates a bright and surreal landscape
+                palette from <em>Romeo + Juliet</em> is perfect for you. Baz Luhrmann creates a bright and surreal
+                landscape
                 through film, just like the inside of your mind. Embrace what makes you different and chase the ideas
                 that you design.
             </p>
@@ -246,61 +233,95 @@
 
     </div>
     <!--     NOTE TO SELF: Link to film-grab.com link for each movie with "see more" or something  -->
+    <h4 class="instructions">Select an image to display the associated zodiac sign.</h4>
+    <section class="movieStills__gallery">
 
-    <div class="movieStills__container">
         <div class="movieStills">
             <figure class="movieStills__figure">
-                <img class="movieStills__thumbnail" src="img/fear-and-loathing.jpeg"
+                <img class="movieStills__thumbnail js-grid-img" src="img/fear-and-loathing.jpeg"
                     alt="Fear and Loathing in Las Vegas Screenshot">
-                <figcaption class="zodiacLabel">Aries</figcaption>
+                <figcaption class="zodiacLabel upper">Aries</figcaption>
             </figure>
         </div>
 
         <div class="movieStills">
-            <img class="movieStills__thumbnail" src="img/her.jpeg" alt="Her Screenshot">
+            <figure class="movieStills__figure">
+                <img class="movieStills__thumbnail" src="img/her.jpeg" alt="Her Screenshot">
+                <figcaption class="zodiacLabel upper">Taurus</figcaption>
+            </figure>
         </div>
 
         <div class="movieStills">
-            <img class="movieStills__thumbnail" src="img/amelie.jpeg" alt="Amelie Screenshot">
+            <figure class="movieStills__figure">
+                <img class="movieStills__thumbnail" src="img/amelie.jpeg" alt="Amelie Screenshot">
+                <figcaption class="zodiacLabel upper">Gemini</figcaption>
+            </figure>
         </div>
 
         <div class="movieStills">
-            <img class="movieStills__thumbnail" src="img/social-network.jpeg" alt="The Social Network Screenshot">
+            <figure class="movieStills__figure">
+                <img class="movieStills__thumbnail" src="img/social-network.jpeg" alt="The Social Network Screenshot">
+                <figcaption class="zodiacLabel upper">Cancer</figcaption>
+            </figure>
         </div>
 
         <div class="movieStills">
-            <img class="movieStills__thumbnail" src="img/fantastic-fox.jpeg" alt="Fantastic Mr. Fox Screenshot">
+            <figure class="movieStills__figure">
+                <img class="movieStills__thumbnail" src="img/fantastic-fox.jpeg" alt="Fantastic Mr. Fox Screenshot">
+                <figcaption class="zodiacLabel upper">Leo</figcaption>
+            </figure>
         </div>
 
         <div class="movieStills">
-            <img class="movieStills__thumbnail" src="img/la-la-land.jpeg" alt="La La Land Screenshot">
+            <figure class="movieStills__figure">
+                <img class="movieStills__thumbnail" src="img/la-la-land.jpeg" alt="La La Land Screenshot">
+                <figcaption class="zodiacLabel upper">Virgo</figcaption>
+            </figure>
         </div>
 
         <div class="movieStills">
-            <img class="movieStills__thumbnail" src="img/harry-potter.jpeg"
-                alt="Harry Potter and the Chamber of Secrets Screenshot">
+            <figure class="movieStills__figure">
+                <img class="movieStills__thumbnail" src="img/harry-potter.jpeg"
+                    alt="Harry Potter and the Chamber of Secrets Screenshot">
+                <figcaption class="zodiacLabel upper">Libra</figcaption>
+            </figure>
         </div>
 
         <div class="movieStills">
-            <img class="movieStills__thumbnail" src="img/dark-knight.jpeg" alt="The Dark Knight Screenshot">
+            <figure class="movieStills__figure">
+                <img class="movieStills__thumbnail" src="img/dark-knight.jpeg" alt="The Dark Knight Screenshot">
+                <figcaption class="zodiacLabel upper">Scorpio</figcaption>
+            </figure>
         </div>
 
         <div class="movieStills">
-            <img class="movieStills__thumbnail" src="img/joker.png" alt="Joker Screenshot">
+            <figure class="movieStills__figure">
+                <img class="movieStills__thumbnail" src="img/joker.png" alt="Joker Screenshot">
+                <figcaption class="zodiacLabel upper">Sagittarius</figcaption>
+            </figure>
         </div>
 
         <div class="movieStills">
-            <img class="movieStills__thumbnail" src="img/lars.jpeg" alt="Lars and the Real Girl Screenshot">
+            <figure class="movieStills__figure">
+                <img class="movieStills__thumbnail" src="img/lars.jpeg" alt="Lars and the Real Girl Screenshot">
+                <figcaption class="zodiacLabel upper">Capricorn</figcaption>
+            </figure>
         </div>
 
         <div class="movieStills">
-            <img class="movieStills__thumbnail" src="img/twilight.jpeg" alt="Twilight Screenshot">
+            <figure class="movieStills__figure">
+                <img class="movieStills__thumbnail" src="img/twilight.jpeg" alt="Twilight Screenshot">
+                <figcaption class="zodiacLabel upper">Aquarius</figcaption>
+            </figure>
         </div>
 
         <div class="movieStills">
-            <img class="movieStills__thumbnail" src="img/romeo-juliet.jpeg" alt="Romeo + Juliet Screenshot">
+            <figure class="movieStills__figure">
+                <img class="movieStills__thumbnail" src="img/romeo-juliet.jpeg" alt="Romeo + Juliet Screenshot">
+                <figcaption class="zodiacLabel upper">Pisces</figcaption>
+            </figure>
         </div>
-    </div>
+    </section>
 
 </body>
 

@@ -1,5 +1,11 @@
 const submitButton = document.querySelector(".js-submit-button");
+const imgButton = document.querySelector(".js-grid-img");
 
+/***
+ * On submit button click:
+ * collects birthDate
+ * calls setZodiac() function to set astrological sign
+ */
 submitButton.addEventListener("click", function (event) {
 
     event.preventDefault();
@@ -21,69 +27,74 @@ submitButton.addEventListener("click", function (event) {
     setZodiac(month, day);
 });
 
-function setZodiac(month, day) {
-    switch (month) { //switch month
+imgButton.addEventListener("click", function(event){ //console says Cannot read properties of null (reading 'addEventListener')
+    alert("hello");
 
+});
+
+function setZodiac(month, day) {
+    var sign;
+    switch (month) { //switch month
         case 1: //jan
 
             if (day < 20) {
-                console.log("capricorn");
+                sign = "capricorn";
             } else {
-                console.log("aquarius");
+                sign = "aquarius";
             }
             break;
 
         case 2: //feb
 
             if (day < 19) {
-                console.log("aquarius");
+                sign = "aquarius";
             } else {
-                console.log("pisces");
+                sign = "pisces";
             }
             break;
 
         case 3: //mar
 
             if (day < 21) {
-                console.log("pisces");
+                sign = "pisces";
             } else {
-                console.log("aries");
+                sign = "aries";
             }
             break;
 
         case 4: //apr
 
             if (day < 20) {
-                console.log("aries");
+                sign="aries";
             } else {
-                console.log("taurus");
+                sign="taurus";
             }
             break;
 
         case 5: //may
 
             if (day < 21) {
-                console.log("taurus");
+                sign="taurus";
             } else {
-                console.log("gemini");
+                sign="gemini";
             }
             break;
 
         case 6: //jun
 
             if (day < 21) {
-                console.log("gemini");
+                sign="gemini";
             } else {
-                console.log("cancer");
+                sign="cancer";
             }
             break;
 
         case 7: //jul
 
             if (day < 23) {
-                console.log("cancer");
+                sign="cancer";
             } else {
-                console.log("leo");
+                sign="leo";
             }
 
             break;
@@ -91,18 +102,18 @@ function setZodiac(month, day) {
         case 8: //aug
 
             if (day < 23) {
-                console.log("leo");
+                sign="leo";
             } else {
-                console.log("virgo");
+                sign="virgo";
             }
             break;
 
         case 9: //sep
 
             if (day < 23) {
-                console.log("virgo");
+                sign="virgo";
             } else {
-                console.log("libra");
+                sign="libra";
             }
 
             break;
@@ -110,43 +121,32 @@ function setZodiac(month, day) {
         case 10: //oct
 
             if (day < 23) {
-                console.log("libra");
+                sign="libra";
             } else {
-                console.log("scorpio");
+                sign="scorpio";
             }
             break;
 
         case 11: //nov
 
             if (day < 22) {
-                console.log("scorpio");
+                sign="scorpio";
             } else {
-                console.log("sagittarius");
+                sign="sagittarius";
             }
             break;
 
         case 12: //dec
 
             if (day < 22) {
-                console.log("sagittarius");
+                sign="sagittarius";
             } else {
-                console.log("capricorn");
+                sign="capricorn";
             }
-
             break;
-    }
-}
 
-/**
- * ex from class
- * Take the year passed and subtract it from the current year
- */
-function getAge(inputYear) {
-    // Get current year
-    const currentYear = new Date().getFullYear();
-    // Get passed in input year
-    const year = inputYear;
-    // Calculate age
-    const age = currentYear - year;
-    return age;
+    }
+
+    const signCard = document.getElementById(sign);
+    signCard.classList.toggle("hidden");
 }
