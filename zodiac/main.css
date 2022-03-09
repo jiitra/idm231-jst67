@@ -96,7 +96,10 @@ body{
     background-color: #f0f0f0;
     position: fixed;
     max-height: 90vh;
-    width: 50vw;
+    /* width: 50vw; */
+    /* width: 31.25rem; */
+    box-shadow: 0 0 5rem #0000007a;
+    width: 50%;
     margin: 0 25vw;
     z-index: 10;
     padding: 3rem;

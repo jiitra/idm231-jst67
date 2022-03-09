@@ -27,7 +27,7 @@ submitButton.addEventListener("click", function (event) {
     setZodiac(month, day);
 });
 
-imgButton.addEventListener("click", function(event){ //console says Cannot read properties of null (reading 'addEventListener')
+imgButton.addEventListener("click", function (event) { //console says Cannot read properties of null (reading 'addEventListener')
     alert("hello");
 
 });
@@ -65,36 +65,36 @@ function setZodiac(month, day) {
         case 4: //apr
 
             if (day < 20) {
-                sign="aries";
+                sign = "aries";
             } else {
-                sign="taurus";
+                sign = "taurus";
             }
             break;
 
         case 5: //may
 
             if (day < 21) {
-                sign="taurus";
+                sign = "taurus";
             } else {
-                sign="gemini";
+                sign = "gemini";
             }
             break;
 
         case 6: //jun
 
             if (day < 21) {
-                sign="gemini";
+                sign = "gemini";
             } else {
-                sign="cancer";
+                sign = "cancer";
             }
             break;
 
         case 7: //jul
 
             if (day < 23) {
-                sign="cancer";
+                sign = "cancer";
             } else {
-                sign="leo";
+                sign = "leo";
             }
 
             break;
@@ -102,18 +102,18 @@ function setZodiac(month, day) {
         case 8: //aug
 
             if (day < 23) {
-                sign="leo";
+                sign = "leo";
             } else {
-                sign="virgo";
+                sign = "virgo";
             }
             break;
 
         case 9: //sep
 
             if (day < 23) {
-                sign="virgo";
+                sign = "virgo";
             } else {
-                sign="libra";
+                sign = "libra";
             }
 
             break;
@@ -121,27 +121,27 @@ function setZodiac(month, day) {
         case 10: //oct
 
             if (day < 23) {
-                sign="libra";
+                sign = "libra";
             } else {
-                sign="scorpio";
+                sign = "scorpio";
             }
             break;
 
         case 11: //nov
 
             if (day < 22) {
-                sign="scorpio";
+                sign = "scorpio";
             } else {
-                sign="sagittarius";
+                sign = "sagittarius";
             }
             break;
 
         case 12: //dec
 
             if (day < 22) {
-                sign="sagittarius";
+                sign = "sagittarius";
             } else {
-                sign="capricorn";
+                sign = "capricorn";
             }
             break;
 
