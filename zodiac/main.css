@@ -1,3 +1,9 @@
+/*
+TO DO:
+- style cards more
+- sound
+
+*/
 :root{
     --background-color: #f5f5f5;
     --card-color: 
@@ -62,6 +68,10 @@ body{
     margin: 2rem auto;
 }
 
+.blur{
+    filter: blur(10px);
+}
+
 .movieStills__figure{
     position: relative;
 }
@@ -88,21 +98,57 @@ body{
     text-shadow: 0 0 0.6rem black;
 }
 
-.card__img{
-    max-width: 300px; /* for now*/
-}
-
 .card{
     background-color: #f0f0f0;
+    box-shadow: 0 0 5rem #0000007a;
     position: fixed;
     max-height: 90vh;
-    /* width: 50vw; */
-    /* width: 31.25rem; */
-    box-shadow: 0 0 5rem #0000007a;
+    min-height: 31.25rem;
+    width: 31.25rem;
+    
     width: 50%;
     margin: 0 25vw;
+    top: 10vh;
     z-index: 10;
     padding: 3rem;
+
+    /*for items inside*/
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__header{
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.card__img{
+    /* max-width: 300px; /* for now*/
+
+    /* max-height: 25rem; */
+    max-width: 40vw;
+    /* width: auto;  */
+    /* height: 100%; */
+}
+
+.card__description{
+    font-weight: 300;
+    max-width: 45rem;
+    padding: 2rem;
+    justify-self: flex-end;
+}
+
+.card__x{
+    position:absolute;
+    top: 0;
+    align-self: flex-start;
+    font-size: 2rem;
+    margin-top: 1rem;
+    left: 3vh;
+    border: none;
 }
 
 .hidden{

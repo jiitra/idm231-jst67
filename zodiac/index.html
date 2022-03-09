@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/png" href="img/calendar-emoji.png">
     <title>Zodiac Project</title>
 </head>
 
@@ -26,15 +27,14 @@
                 <button class="js-submit-button" type="button">Submit</button>
 
             </form>
-            <script src="app.js"></script>
         </div>
     </section>
 
     <div class="card__container">
 
         <div class="card hidden" id="aries">
-
-            <h1><em> Fear and Loathing in Las Vegas </em></h1>
+            <button class="card__x js-close-button">&#x2715</button>
+            <h1 class="card__header upper">Fear and Loathing in Las Vegas</h1>
 
             <img class="card__img" src="img/fear-and-loathing.jpeg" alt="Fear and Loathing in Las Vegas Screenshot">
 
@@ -45,13 +45,14 @@
                 saturated neon colors in this film represent your quickness and spark. Face the world with courage and
                 it will reward your confidence.
             </p>
+            <a href="https://www.film-grab.com/2014/06/16/fear-and-loathing-in-las-vegas/" target="_blank">View full
+                gallery</a>
 
         </div>
 
-        <div class="card hidden">
-
-            <h1><em> Her </em></h1>
-
+        <div class="card hidden" id="taurus">
+            <button class="card__x js-close-button">&#x2715</button>
+            <h1 class="card__header upper">Her</h1>
             <img class="card__img" src="img/her.jpeg" alt="Her Screenshot">
 
             <p class="card__description">
@@ -61,12 +62,13 @@
                 you feel right at home, and you aren’t afraid to stay loyal to your roots. You keep going at your own
                 pace. Stop and smell the roses.
             </p>
+            <a href="https://www.film-grab.com/2014/05/06/her/" target="_blank">View full gallery</a>
 
         </div>
 
-        <div class="card hidden">
-
-            <h1><em> Amelie </em></h1>
+        <div class="card hidden" id="gemini">
+            <button class="card__x js-close-button">&#x2715</button>
+            <h1 class="card__header upper">Amelie</h1>
 
             <img class="card__img" src="img/amelie.jpeg" alt="Amelie Screenshot">
 
@@ -77,17 +79,17 @@
                 complementary colors, which is similar to how you think out of the box and embrace new experiences.
                 People may not understand you at first, but don’t give up your identity because of misconceptions.
             </p>
-
+            <a href="https://www.film-grab.com/2012/11/05/amelie/" target="_blank">View full gallery</a>
         </div>
 
-        <div class="card hidden">
-
-            <h1><em> The Social Network </em></h1>
+        <div class="card hidden" id="cancer">
+            <button class="card__x js-close-button">&#x2715</button>
+            <h1 class="card__header upper">The Social Network</h1>
 
             <img class="card__img" src="img/social-network.jpeg" alt="The Social Network Screenshot">
 
             <p class="card__description">
-                <b>Cancer</b>,you’re known as the most sensitive zodiac sign. That’s why the color palette in <em>The
+                <b>Cancer</b>, you’re known as the most sensitive zodiac sign. That’s why the color palette in <em>The
                     Social
                     Network</em> is perfect for you! You’re emotionally charged and dramatic, and the intense contrast
                 between
@@ -95,80 +97,82 @@
                 and the emotions of others around you at maximum capacity. When you feel overwhelmed, take a deep
                 breath. Your close circle will look out for you the same way you do for them.
             </p>
-
+            <a href="https://www.film-grab.com/2013/10/28/the-social-network/" target="_blank">View full gallery</a>
         </div>
 
-        <div class="card hidden">
-
-            <h1><em> Fantastic Mr. Fox </em></h1>
+        <div class="card hidden" id="leo">
+            <button class="card__x js-close-button">&#x2715</button>
+            <h1 class="card__header upper">Fantastic Mr. Fox</h1>
 
             <img class="card__img" src="img/fantastic-fox.jpeg" alt="Fantastic Mr. Fox">
 
             <p class="card__description">
-                <b>Leo</b>,the lion, it’s all about you! You love to be the center of attention and the radiant color
+                <b>Leo</b>, the lion, it’s all about you! You love to be the center of attention and the radiant color
                 palette of <em>Fantastic Mr. Fox</em> is perfect for you. The summery orange hues are dazzling and fun,
                 channeling your innate showmanship and warmth. Beware of excess vanity, and with self-awareness, you can
                 conquer anything.
             </p>
-
+            <a href="https://www.film-grab.com/2013/04/29/fantastic-mr-fox/" target="_blank">View full gallery</a>
         </div>
 
-        <div class="card hidden">
-
-            <h1><em> La La Land </em></h1>
+        <div class="card hidden" id="virgo">
+            <button class="card__x js-close-button">&#x2715</button>
+            <h1 class="card__header upper">La La Land</h1>
 
             <img class="card__img" src="img/la-la-land.jpeg" alt="La La Land">
 
             <p class="card__description">
-                <b>Virgo</b>,you love systems and you seek problem-solving opportunities. The color palette in <em>La La
+                <b>Virgo</b>, you love systems and you seek problem-solving opportunities. The color palette in <em>La
+                    La
                     Land</em> fits perfectly into your organizational daydreams. Bright colors, often primary, are
                 distinct from
                 one another and signal narrative changes. What could be more satisfying?
             </p>
-
+            <a href="https://www.film-grab.com/2019/04/12/la-la-land/" target="_blank">View full gallery</a>
         </div>
 
-        <div class="card hidden">
-
-            <h1><em> Harry Potter and the Chamber of Secrets </em></h1>
+        <div class="card hidden" id="libra">
+            <button class="card__x js-close-button">&#x2715</button>
+            <h1 class="card__header upper">Harry Potter and the Chamber of Secrets</h1>
 
             <img class="card__img" src="img/harry-potter.jpeg" alt="Harry Potter">
 
             <p class="card__description">
-                <b>Libra</b>,you’re receptive and charming. That’s what makes <em>Harry Potter and the Chamber of
+                <b>Libra</b>, you’re receptive and charming. That’s what makes <em>Harry Potter and the Chamber of
                     Secrets</em>
                 perfect for you. The colors of Hogwarts are erudite and carry a degree of responsibility, which are
                 qualities that your friends appreciate about you. You have a darker side that may be prone to worrying,
                 which is represented by the deep shadows in this film. Trust your gut and your outlook will be brighter.
             </p>
-
+            <a href="https://www.film-grab.com/2016/06/30/harry-potter-and-the-chamber-of-secrets/" target="_blank">View full gallery</a>
         </div>
 
-        <div class="card hidden">
-
-            <h1><em> The Dark Knight </em></h1>
+        <div class="card hidden" id="scorpio">
+            <button class="card__x js-close-button">&#x2715</button>
+            <h1 class="card__header upper">The Dark Knight</h1>
 
             <img class="card__img" src="img/dark-knight.jpeg" alt="The Dark Knight">
 
             <p class="card__description">
-                <b>Scorpio</b>,you’re used to being told that you’re the darkest and most brooding zodiac sign. So, your
+                <b>Scorpio</b>, you’re used to being told that you’re the darkest and most brooding zodiac sign. So,
+                your
                 pairing with <em>The Dark Knight</em> shouldn’t come as much of a surprise. Similarly to Batman, you
                 hide within
                 your emotional fortress and fear being vulnerable above all else. The color choices in this film reflect
                 your edgy emotional barricade, with lots of darkness and drama. Here’s a word of advice: lighten up
                 sometimes. The world isn’t as evil as you think, and the people you trust are grateful for you.
             </p>
-
+            <a href="https://www.film-grab.com/2010/10/02/the-dark-knight/" target="_blank">View full gallery</a>
         </div>
 
-        <div class="card hidden">
-
-            <h1><em> Joker </em></h1>
+        <div class="card hidden" id="sagittarius">
+            <button class="card__x js-close-button">&#x2715</button>
+            <h1 class="card__header upper">Joker</h1>
 
             <img class="card__img" src="img/joker.png" alt="Joker">
 
             <p class="card__description">
-                <b>Sagittarius</b>,you’re inquisitive and relentless when you find something to fixate on.
+                <b>Sagittarius</b>, you’re inquisitive and relentless when you find something to fixate on.
                 <em>Joker</em>’s
                 mixture of warm and cool colors represents your taste for exploration and your tireless passion. Some
                 moments of the film are muted or bleak, but this does not have to portray a negative impression.
@@ -177,17 +181,18 @@
                 yourself and remain open to new perspectives.
 
             </p>
-
+            <a href="https://www.film-grab.com/2020/08/12/joker/" target="_blank">View full gallery</a>
         </div>
 
-        <div class="card hidden">
-
-            <h1><em> Lars and the Real Girl </em></h1>
+        <div class="card hidden" id="capricorn">
+            <button class="card__x js-close-button">&#x2715</button>
+            <h1 class="card__header upper">Lars and the Real Girl</h1>
 
             <img class="card__img" src="img/lars.jpeg" alt="Lars">
 
             <p class="card__description">
-                <b>Capricorn</b>,you’re as straightforward as it gets. You’re an efficiency machine, sometimes perceived
+                <b>Capricorn</b>, you’re as straightforward as it gets. You’re an efficiency machine, sometimes
+                perceived
                 by others as stoic or cold. The color palette in <em>Lars and the Real Girl</em> is effective and
                 restrained,
                 just like you. However, there’s a lonely side when you funnel all your energy into work and
@@ -195,72 +200,76 @@
                 cold.
 
             </p>
-
+            <a href="https://www.film-grab.com/2014/06/27/lars-and-the-real-girl/" target="_blank">View full gallery</a>
         </div>
 
-        <div class="card hidden">
-
-            <h1><em> Twilight </em></h1>
+        <div class="card hidden" id="aquarius">
+            <button class="card__x js-close-button">&#x2715</button>
+            <h1 class="card__header upper">Twilight</h1>
 
             <img class="card__img" src="img/twilight.jpeg" alt="Twilight">
 
             <p class="card__description">
-                <b>Aquarius</b>,you’re the classic over-the-top blue color grading from <em>Twilight</em>. You’re quirky
+                <b>Aquarius</b>, you’re the classic over-the-top blue color grading from <em>Twilight</em>. You’re
+                quirky
                 and many
                 may roll their eyes at you, but there’s also something inadvertently charming and memorable about you.
                 For all the time you spend in your mind, it makes sense that you’re cloaked in blue, the cerebral color.
                 Keep striving to be contrarian, and you’ll amass a crowd of dedicated followers.
 
             </p>
-
+            <a href="https://www.film-grab.com/2021/01/07/twilight/" target="_blank">View full gallery</a>
         </div>
 
-        <div class="card hidden">
-
-            <h1><em> Romeo + Juliet </em></h1>
+        <div class="card hidden" id="pisces">
+            <button class="card__x js-close-button">&#x2715</button>
+            <h1 class="card__header upper">Romeo + Juliet</h1>
 
             <img class="card__img" src="img/romeo-juliet.jpeg" alt="Romeo + Juliet">
 
             <p class="card__description">
-                <b>Pisces</b>,you’re an artist and a dreamer. Your imagination is the envy of many. That’s why the color
+                <b>Pisces</b>, you’re an artist and a dreamer. Your imagination is the envy of many. That’s why the
+                color
                 palette from <em>Romeo + Juliet</em> is perfect for you. Baz Luhrmann creates a bright and surreal
                 landscape
                 through film, just like the inside of your mind. Embrace what makes you different and chase the ideas
                 that you design.
             </p>
-
+            <a href="https://www.film-grab.com/2015/02/24/romeo-juliet/" target="_blank">View full gallery</a>
         </div>
 
     </div>
-    <!--     NOTE TO SELF: Link to film-grab.com link for each movie with "see more" or something  -->
+
     <h4 class="instructions">Select an image to display the associated zodiac sign.</h4>
     <section class="movieStills__gallery">
 
         <div class="movieStills">
             <figure class="movieStills__figure">
-                <input type="image" class="movieStills__thumbnail js-grid-img" src="img/fear-and-loathing.jpeg"
-                    alt="Fear and Loathing in Las Vegas Screenshot">
+                <input type="image" class="movieStills__thumbnail js-grid-img" id="aries"
+                    src="img/fear-and-loathing.jpeg" alt="Fear and Loathing in Las Vegas Screenshot">
                 <figcaption class="zodiacLabel upper">Aries</figcaption>
             </figure>
         </div>
 
         <div class="movieStills">
             <figure class="movieStills__figure">
-                <input type="image" class="movieStills__thumbnail" src="img/her.jpeg" alt="Her Screenshot">
+                <input type="image" class="movieStills__thumbnail js-grid-img" id="taurus" src="img/her.jpeg"
+                    alt="Her Screenshot">
                 <figcaption class="zodiacLabel upper">Taurus</figcaption>
             </figure>
         </div>
 
         <div class="movieStills">
             <figure class="movieStills__figure">
-                <input type="image" class="movieStills__thumbnail" src="img/amelie.jpeg" alt="Amelie Screenshot">
+                <input type="image" class="movieStills__thumbnail js-grid-img" id="gemini" src="img/amelie.jpeg"
+                    alt="Amelie Screenshot">
                 <figcaption class="zodiacLabel upper">Gemini</figcaption>
             </figure>
         </div>
 
         <div class="movieStills">
             <figure class="movieStills__figure">
-                <input type="image" class="movieStills__thumbnail" src="img/social-network.jpeg"
+                <input type="image" class="movieStills__thumbnail js-grid-img" id="cancer" src="img/social-network.jpeg"
                     alt="The Social Network Screenshot">
                 <figcaption class="zodiacLabel upper">Cancer</figcaption>
             </figure>
@@ -268,7 +277,7 @@
 
         <div class="movieStills">
             <figure class="movieStills__figure">
-                <input type="image" class="movieStills__thumbnail" src="img/fantastic-fox.jpeg"
+                <input type="image" class="movieStills__thumbnail js-grid-img" id="leo" src="img/fantastic-fox.jpeg"
                     alt="Fantastic Mr. Fox Screenshot">
                 <figcaption class="zodiacLabel upper">Leo</figcaption>
             </figure>
@@ -276,7 +285,7 @@
 
         <div class="movieStills">
             <figure class="movieStills__figure">
-                <input type="image" class="movieStills__thumbnail" src="img/la-la-land.jpeg"
+                <input type="image" class="movieStills__thumbnail js-grid-img" id="virgo" src="img/la-la-land.jpeg"
                     alt="La La Land Screenshot">
                 <figcaption class="zodiacLabel upper">Virgo</figcaption>
             </figure>
@@ -284,7 +293,7 @@
 
         <div class="movieStills">
             <figure class="movieStills__figure">
-                <input type="image" class="movieStills__thumbnail" src="img/harry-potter.jpeg"
+                <input type="image" class="movieStills__thumbnail js-grid-img" id="libra" src="img/harry-potter.jpeg"
                     alt="Harry Potter and the Chamber of Secrets Screenshot">
                 <figcaption class="zodiacLabel upper">Libra</figcaption>
             </figure>
@@ -292,7 +301,7 @@
 
         <div class="movieStills">
             <figure class="movieStills__figure">
-                <input type="image" class="movieStills__thumbnail" src="img/dark-knight.jpeg"
+                <input type="image" class="movieStills__thumbnail js-grid-img" id="scorpio" src="img/dark-knight.jpeg"
                     alt="The Dark Knight Screenshot">
                 <figcaption class="zodiacLabel upper">Scorpio</figcaption>
             </figure>
@@ -300,14 +309,15 @@
 
         <div class="movieStills">
             <figure class="movieStills__figure">
-                <input type="image" class="movieStills__thumbnail" src="img/joker.png" alt="Joker Screenshot">
+                <input type="image" class="movieStills__thumbnail js-grid-img" id="sagittarius" src="img/joker.png"
+                    alt="Joker Screenshot">
                 <figcaption class="zodiacLabel upper">Sagittarius</figcaption>
             </figure>
         </div>
 
         <div class="movieStills">
             <figure class="movieStills__figure">
-                <input type="image" class="movieStills__thumbnail" src="img/lars.jpeg"
+                <input type="image" class="movieStills__thumbnail js-grid-img" id="capricorn" src="img/lars.jpeg"
                     alt="Lars and the Real Girl Screenshot">
                 <figcaption class="zodiacLabel upper">Capricorn</figcaption>
             </figure>
@@ -315,20 +325,25 @@
 
         <div class="movieStills">
             <figure class="movieStills__figure">
-                <input type="image" class="movieStills__thumbnail" src="img/twilight.jpeg" alt="Twilight Screenshot">
+                <input type="image" class="movieStills__thumbnail js-grid-img" id="aquarius" src="img/twilight.jpeg"
+                    alt="Twilight Screenshot">
                 <figcaption class="zodiacLabel upper">Aquarius</figcaption>
             </figure>
         </div>
 
         <div class="movieStills">
             <figure class="movieStills__figure">
-                <input type="image" class="movieStills__thumbnail" src="img/romeo-juliet.jpeg"
+                <input type="image" class="movieStills__thumbnail js-grid-img" id="pisces" src="img/romeo-juliet.jpeg"
                     alt="Romeo + Juliet Screenshot">
                 <figcaption class="zodiacLabel upper">Pisces</figcaption>
             </figure>
         </div>
     </section>
 
+
+
+    <!-- script at very bottom -->
+    <script src="app.js"></script>
 </body>
 
 </html>

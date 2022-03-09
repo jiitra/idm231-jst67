@@ -1,7 +1,9 @@
 const submitButton = document.querySelector(".js-submit-button");
-const imgButton = document.querySelector(".js-grid-img");
+const imgButton = document.querySelectorAll(".js-grid-img");
+const closeButton = document.querySelectorAll(".js-close-button");
+const allCards = document.querySelectorAll(".card");
 
-/***
+/**
  * On submit button click:
  * collects birthDate
  * calls setZodiac() function to set astrological sign
@@ -20,16 +22,30 @@ submitButton.addEventListener("click", function (event) {
     let day = birthDate.getDate() + 1;
     let year = birthDate.getFullYear();
 
-    console.log(day);
+    /* console.log(day);
 
-    console.log(month);
+    console.log(month); */
 
     setZodiac(month, day);
 });
 
-imgButton.addEventListener("click", function (event) { //console says Cannot read properties of null (reading 'addEventListener')
-    alert("hello");
+/**
+ * for each image in the grid,
+ * eventListener waits for click
+ * on click, collect id and assign to var sign
+ * calls displayCard(sign)
+ */
+imgButton.forEach(element => {
+    element.addEventListener("click", function (event) {
+        var sign = element.id;
+        displayCard(sign);
+    });
+});
 
+closeButton.forEach(element => {
+    element.addEventListener("click", function (event) {
+        closeCard();
+    });
 });
 
 function setZodiac(month, day) {
@@ -146,7 +162,39 @@ function setZodiac(month, day) {
             break;
 
     }
+    displayCard(sign);
+}
 
+/**
+ * displayCard toggles card visibility
+ * @param {*} sign - string value with astrological sign to be displayed
+ */
+function displayCard(sign) {
     const signCard = document.getElementById(sign);
     signCard.classList.toggle("hidden");
+    toggleBlur();
+    /*COME BACK, RENAME, TIDY*/
+    /* const gallery = document.querySelector(".movieStills__gallery"); */
+    /* hello.style.filter ="blur(10px)"; */
+    /* gallery.classList.toggle("blur"); */
+
+    imgButton.forEach(element => {
+        element.disabled = true;
+    });
+}
+
+function closeCard() {
+    allCards.forEach(element => {
+        element.classList.add("hidden");
+    });
+    toggleBlur();
+
+    imgButton.forEach(element => {
+        element.disabled = false;
+    });
+}
+
+function toggleBlur() {
+    const gallery = document.querySelector(".movieStills__gallery");
+    gallery.classList.toggle("blur");
 }
