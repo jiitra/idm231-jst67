@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="main.css">
     <link rel="icon" type="image/png" href="img/calendar-emoji.png">
     <title>Zodiac Project</title>
@@ -24,15 +24,30 @@
 
                 <input id="birthdayinput" class="js-date-input" type="date">
 
-                <button class="js-submit-button" type="button">Submit</button>
+                <button class="text__button submit__button js-submit-button" type="button">Submit</button>
 
             </form>
         </div>
     </section>
 
+    <button class="help__button text__button js-help-button" type="button">Help</button>
     <div class="card__container">
 
-        <div class="card hidden" id="aries">
+        <div class="card hidden help__card" id="help">
+            <button class="card__x js-close-button">&#x2715</button>
+            <h1 class="card__header upper">Help</h1>
+            <p class="card__description">
+                Enter your birthday using the calendar input, then click submit.
+                <br>
+                The birthday can be re-entered as many times as you'd like, so test out some other dates!
+                <br>
+                You may select any image from the gallery to view its associated sign.
+                <br>
+                To close the pop-up window, select the X icon.
+            </p>
+        </div>
+
+        <div class="card hidden" id="aries" data-audio-file="mp3/fear.mp3">
             <button class="card__x js-close-button">&#x2715</button>
             <h1 class="card__header upper">Fear and Loathing in Las Vegas</h1>
 
@@ -50,7 +65,7 @@
 
         </div>
 
-        <div class="card hidden" id="taurus">
+        <div class="card hidden" id="taurus" data-audio-file="mp3/her.mp3">
             <button class="card__x js-close-button">&#x2715</button>
             <h1 class="card__header upper">Her</h1>
             <img class="card__img" src="img/her.jpeg" alt="Her Screenshot">
@@ -66,7 +81,7 @@
 
         </div>
 
-        <div class="card hidden" id="gemini">
+        <div class="card hidden" id="gemini" data-audio-file="mp3/amelie.mp3">
             <button class="card__x js-close-button">&#x2715</button>
             <h1 class="card__header upper">Amelie</h1>
 
@@ -82,7 +97,7 @@
             <a href="https://www.film-grab.com/2012/11/05/amelie/" target="_blank">View full gallery</a>
         </div>
 
-        <div class="card hidden" id="cancer">
+        <div class="card hidden" id="cancer" data-audio-file="mp3/social.mp3">
             <button class="card__x js-close-button">&#x2715</button>
             <h1 class="card__header upper">The Social Network</h1>
 
@@ -100,7 +115,7 @@
             <a href="https://www.film-grab.com/2013/10/28/the-social-network/" target="_blank">View full gallery</a>
         </div>
 
-        <div class="card hidden" id="leo">
+        <div class="card hidden" id="leo" data-audio-file="mp3/fox.mp3">
             <button class="card__x js-close-button">&#x2715</button>
             <h1 class="card__header upper">Fantastic Mr. Fox</h1>
 
@@ -115,7 +130,7 @@
             <a href="https://www.film-grab.com/2013/04/29/fantastic-mr-fox/" target="_blank">View full gallery</a>
         </div>
 
-        <div class="card hidden" id="virgo">
+        <div class="card hidden" id="virgo" data-audio-file="mp3/la.mp3">
             <button class="card__x js-close-button">&#x2715</button>
             <h1 class="card__header upper">La La Land</h1>
 
@@ -131,7 +146,7 @@
             <a href="https://www.film-grab.com/2019/04/12/la-la-land/" target="_blank">View full gallery</a>
         </div>
 
-        <div class="card hidden" id="libra">
+        <div class="card hidden" id="libra" data-audio-file="mp3/harry.mp3">
             <button class="card__x js-close-button">&#x2715</button>
             <h1 class="card__header upper">Harry Potter and the Chamber of Secrets</h1>
 
@@ -144,10 +159,11 @@
                 qualities that your friends appreciate about you. You have a darker side that may be prone to worrying,
                 which is represented by the deep shadows in this film. Trust your gut and your outlook will be brighter.
             </p>
-            <a href="https://www.film-grab.com/2016/06/30/harry-potter-and-the-chamber-of-secrets/" target="_blank">View full gallery</a>
+            <a href="https://www.film-grab.com/2016/06/30/harry-potter-and-the-chamber-of-secrets/" target="_blank">View
+                full gallery</a>
         </div>
 
-        <div class="card hidden" id="scorpio">
+        <div class="card hidden" id="scorpio" data-audio-file="mp3/dark.mp3">
             <button class="card__x js-close-button">&#x2715</button>
             <h1 class="card__header upper">The Dark Knight</h1>
 
@@ -165,7 +181,7 @@
             <a href="https://www.film-grab.com/2010/10/02/the-dark-knight/" target="_blank">View full gallery</a>
         </div>
 
-        <div class="card hidden" id="sagittarius">
+        <div class="card hidden" id="sagittarius" data-audio-file="mp3/joker.mp3">
             <button class="card__x js-close-button">&#x2715</button>
             <h1 class="card__header upper">Joker</h1>
 
@@ -184,7 +200,7 @@
             <a href="https://www.film-grab.com/2020/08/12/joker/" target="_blank">View full gallery</a>
         </div>
 
-        <div class="card hidden" id="capricorn">
+        <div class="card hidden" id="capricorn" data-audio-file="mp3/lars.mp3">
             <button class="card__x js-close-button">&#x2715</button>
             <h1 class="card__header upper">Lars and the Real Girl</h1>
 
@@ -203,7 +219,7 @@
             <a href="https://www.film-grab.com/2014/06/27/lars-and-the-real-girl/" target="_blank">View full gallery</a>
         </div>
 
-        <div class="card hidden" id="aquarius">
+        <div class="card hidden" id="aquarius" data-audio-file="mp3/twilight.mp3">
             <button class="card__x js-close-button">&#x2715</button>
             <h1 class="card__header upper">Twilight</h1>
 
@@ -221,7 +237,7 @@
             <a href="https://www.film-grab.com/2021/01/07/twilight/" target="_blank">View full gallery</a>
         </div>
 
-        <div class="card hidden" id="pisces">
+        <div class="card hidden" id="pisces" data-audio-file="mp3/romeo.mp3">
             <button class="card__x js-close-button">&#x2715</button>
             <h1 class="card__header upper">Romeo + Juliet</h1>
 
@@ -239,6 +255,8 @@
         </div>
 
     </div>
+
+    <audio id="speakers"></audio>
 
     <h4 class="instructions">Select an image to display the associated zodiac sign.</h4>
     <section class="movieStills__gallery">

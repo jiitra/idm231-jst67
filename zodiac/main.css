@@ -1,7 +1,6 @@
 /*
 TO DO:
-- style cards more
-- sound
+- help page
 
 */
 :root{
@@ -16,13 +15,25 @@ TO DO:
     padding: 0;
 }
 
-body{
+html{
     font-family: Helvetica, sans-serif;
     background-color: var(--background-color);
 }
 
+.text__button{
+    background: var(--background-color);
+    border-color: grey;
+    border-style:solid;
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.submit__button{
+    margin: 0 1rem;
+}
+
 .intro{
-    margin: 3rem auto;
     display:grid;
     justify-content: center;
     text-align: center;
@@ -48,7 +59,7 @@ body{
 .instructions{
     text-align: center;
     font-weight: 300;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
 .movieStills__thumbnail{
@@ -139,6 +150,7 @@ body{
     max-width: 45rem;
     padding: 2rem;
     justify-self: flex-end;
+    line-height: 1.5rem;
 }
 
 .card__x{
@@ -149,9 +161,68 @@ body{
     margin-top: 1rem;
     left: 3vh;
     border: none;
+    cursor: pointer;
 }
 
 .hidden{
     display: none;
 }
-/* write a media query to reduce image w/h at breakpoints */
+
+.help__button{
+    position: fixed;
+    top: 5vh;
+    left: 5vw;
+    z-index: 20;
+}
+
+.help__card{
+    text-align: center;
+}
+
+/* pretty for mobile */
+@media screen and (max-width: 600px) {
+    .movieStills__thumbnail{
+        width: 20rem; /* ~500 px */
+        height: 10rem;
+        object-fit: cover;
+    }
+
+    .movieStills{
+        height: 10rem;
+        overflow: hidden;
+    }
+
+    .card{
+        top: 2vh;
+		margin: 0 10vw;
+		width: 80vw;
+        padding: 1rem;
+	}
+
+    .card__description{
+        padding: 1rem 0;
+        font-size: 0.75rem;
+        line-height: 1.2rem;
+    }
+
+    .card__header{
+        font-size: 1.5rem;
+    }
+
+    .card__img{
+        max-width: 80vw;
+    }
+
+    .card__x{
+        font-size: 1rem;
+        background: none;
+        left: 0.5rem;
+    }
+
+    .help__button{
+        top: auto;
+        left: auto;
+        bottom: 2vh;
+        right: 1vh;
+    }
+}

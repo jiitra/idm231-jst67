@@ -1,7 +1,9 @@
 const submitButton = document.querySelector(".js-submit-button");
+const helpButton = document.querySelector(".js-help-button");
 const imgButton = document.querySelectorAll(".js-grid-img");
 const closeButton = document.querySelectorAll(".js-close-button");
 const allCards = document.querySelectorAll(".card");
+const audioPlayer = document.querySelector("#speakers");
 
 /**
  * On submit button click:
@@ -9,24 +11,19 @@ const allCards = document.querySelectorAll(".card");
  * calls setZodiac() function to set astrological sign
  */
 submitButton.addEventListener("click", function (event) {
-
-    event.preventDefault();
-
-    /* const divElement = document.querySelector("[data-content-area]");
- */
     const dateInput = document.querySelector(".js-date-input");
 
     let birthDate = new Date(dateInput.value); //.value collects it 
-
     let month = birthDate.getMonth() + 1;
     let day = birthDate.getDate() + 1;
     let year = birthDate.getFullYear();
 
-    /* console.log(day);
-
-    console.log(month); */
-
+    event.preventDefault();
     setZodiac(month, day);
+});
+
+helpButton.addEventListener("click", function (event) {
+    displayCard("help");
 });
 
 /**
@@ -170,14 +167,18 @@ function setZodiac(month, day) {
  * @param {*} sign - string value with astrological sign to be displayed
  */
 function displayCard(sign) {
+    //display card
     const signCard = document.getElementById(sign);
     signCard.classList.toggle("hidden");
+    //blur background
     toggleBlur();
-    /*COME BACK, RENAME, TIDY*/
-    /* const gallery = document.querySelector(".movieStills__gallery"); */
-    /* hello.style.filter ="blur(10px)"; */
-    /* gallery.classList.toggle("blur"); */
-
+    //play audio
+    if (sign != "help") { //prevents null error from "help" not having audio
+        audioPlayer.src = signCard.getAttribute("data-audio-file");
+        audioPlayer.play();
+        audioPlayer.loop = true;
+    }
+    //disable img gallery clicks
     imgButton.forEach(element => {
         element.disabled = true;
     });
@@ -185,10 +186,16 @@ function displayCard(sign) {
 
 function closeCard() {
     allCards.forEach(element => {
+        //hide all elements
         element.classList.add("hidden");
+        //pause all elements
+        audioPlayer.src = element.getAttribute("data-audio-file");
+        audioPlayer.pause();
     });
+    //unblur background
     toggleBlur();
 
+    //enable gallery clicks
     imgButton.forEach(element => {
         element.disabled = false;
     });
